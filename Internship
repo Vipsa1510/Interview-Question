@@ -61,3 +61,128 @@ which is very useful for platforms like YouTube Shorts or social media.
 
 Additionally, building an internal solution allows the company to customize the processing pipeline, 
 control the data, and integrate it with their existing systems, which may not always be possible with external tools.
+
+8)Data Analyst Intern – Maruti InfoSoft
+Problem
+
+During this internship, I worked on analyzing e-commerce clothing market data to help understand sales performance and competitor trends.
+
+Approach
+
+I collected competitor product data using web scraping techniques, and then performed data cleaning and analysis to identify useful insights. I also created interactive dashboards and reports to visualize key business metrics such as sales trends and product performance.
+
+Tools
+
+I used Python for data collection and analysis, SQL for data querying, and visualization tools such as Power BI or Tableau to create dashboards.
+
+Impact
+
+This analysis helped provide insights into market trends and competitor performance, which can support better business decision-making.
+
+ow did you perform web scraping?
+
+Answer
+
+I used Selenium in Python for web scraping. Selenium is useful when websites load content dynamically using JavaScript. It allows us to automate browser actions such as opening web pages, navigating through elements, and extracting the required data. Using Selenium, I collected product details such as product name, price, and category from competitor e-commerce websites.
+
+
+Data Analytics Intern – IBM SkillsBuild
+Problem
+
+During this internship, I worked on analyzing NASA Near-Earth Object (NEO) data to predict potential asteroid threats to Earth.
+
+Approach
+
+I analyzed the dataset containing information about asteroid size, velocity, and distance from Earth. After performing data preprocessing and exploratory data analysis, I built a machine learning model to predict whether an asteroid could be hazardous.
+
+Tools
+
+I implemented the project using Python for data analysis, machine learning libraries for model building, and Streamlit to develop an interactive web application for visualization and prediction.
+
+Impact
+
+This project demonstrates how data analytics and machine learning can be used to analyze space data and support early detection of potential asteroid threats.
+
+Data Analyst Intern – Mentorness
+
+Problem
+
+During this internship, I worked on analyzing NREGA (National Rural Employment Guarantee Act) data to understand employment patterns and government scheme performance.
+
+Approach
+
+I processed and analyzed the dataset to identify employment trends and patterns across different regions. After cleaning and organizing the data, I used SQL queries to extract insights and built visual dashboards to represent the data in an understandable format.
+
+Tools
+
+I used SQL for data querying and Tableau for creating interactive dashboards and visualizations.
+
+Impact
+
+The dashboard helps present employment statistics and trends in a clear visual format, which can support better understanding and decision-making regarding employment schemes.
+
+
+Here are the **key differences between Tableau and Power BI** in a **clear interview-friendly format**.
+
+---
+
+# Difference Between Tableau and Power BI
+
+| Feature       | Tableau                           | Power BI                                                   |
+| ------------- | --------------------------------- | ---------------------------------------------------------- |
+| Developer     | Tableau (Salesforce)              | Microsoft                                                  |
+| Ease of Use   | Slightly more complex             | Easier for beginners                                       |
+| Data Handling | Better for **large datasets**     | Works well with **moderate datasets**                      |
+| Integration   | Integrates with many data sources | Strong integration with **Microsoft tools (Excel, Azure)** |
+| Visualization | Very powerful and customizable    | Good but slightly less flexible                            |
+| Cost          | More expensive                    | More affordable                                            |
+| Performance   | Better for complex analytics      | Good for business reporting                                |
+
+---
+
+# 1️⃣ Tableau
+
+Tableau is mainly used for **advanced data visualization and analytics**.
+
+### Advantages
+
+* Highly **interactive dashboards**
+* Handles **large datasets**
+* Strong **visualization capabilities**
+
+### Common Use
+
+* Data analysts
+* Data scientists
+* Complex analytics dashboards
+
+---
+
+# 2️⃣ Power BI
+
+Power BI is a **business intelligence tool by Microsoft** used for **reporting and dashboards**.
+
+### Advantages
+
+* Easy to learn
+* Strong **integration with Excel and Microsoft ecosystem**
+* Lower cost
+
+### Common Use
+
+* Business reporting
+* Corporate dashboards
+
+---
+
+# Simple Interview Answer
+
+> Tableau and Power BI are both data visualization tools. Tableau is known for advanced visualizations and handling large datasets, while Power BI is easier to use and integrates well with Microsoft tools like Excel and Azure.
+
+---
+
+💡 Interviewers sometimes ask a **follow-up question**:
+
+**“When would you choose Tableau over Power BI?”**
+
+If you want, I can give you a **very strong answer for that question**, which often appears in **data analyst interviews**.
