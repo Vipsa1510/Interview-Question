@@ -69,4 +69,21 @@ which makes it suitable for applications that require SQL queries and structured
 A generated query may sometimes be incorrect. To handle this, we can validate the query before execution and 
 also provide the database schema in the prompt so the model generates more accurate SQL.
 
+Project
+9)Online News Popularity Prediction
+Problem
 
+During this project, I worked on predicting the popularity of online news articles. It is difficult for publishers to know in advance whether an article will become popular or not.
+
+Approach
+
+To solve this, I built a machine learning model that predicts whether a news article will be popular based on its features. The dataset included attributes such as number of words, keywords, publishing day, and content-related features.
+I performed data preprocessing, feature selection, and exploratory data analysis, and then trained multiple machine learning models to predict the popularity of the news articles.
+
+Tools
+
+I implemented the project using Python, Pandas, NumPy, Scikit-learn, and visualization libraries such as Matplotlib and Seaborn.
+
+Impact
+
+This model can help publishers understand which types of articles are more likely to gain attention, which can help improve content strategy and audience engagement.
