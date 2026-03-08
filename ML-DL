@@ -1,0 +1,340 @@
+1) Evaluation Metrix: 
+# 1️⃣ Basic Terms (Confusion Matrix)
+
+| Term                    | Meaning                                     |
+| ----------------------- | ------------------------------------------- |
+| **TP (True Positive)**  | Model correctly detects disease             |
+| **TN (True Negative)**  | Model correctly detects healthy case        |
+| **FP (False Positive)** | Model predicts disease but actually healthy |
+| **FN (False Negative)** | Model predicts healthy but actually disease |
+
+### Accuracy
+
+Accuracy = {TP + TN}/{TP + TN + FP + FN}
+Meaning: Overall correct predictions.
+
+### Precision
+
+Precision = {TP}/{TP + FP}
+Meaning: Out of predicted disease cases, how many are actually disease.
+
+### Recall (Sensitivity)
+
+Recall = {TP}/{TP + FN}
+Meaning: Out of all actual disease cases, how many the model detected.
+
+### F1 Score
+
+F1 = 2 \times \frac{Precision \times Recall}{Precision + Recall}
+Meaning: Balance between precision and recall.
+
+# 3️⃣ In Medical Diagnosis: Which is More Important?
+
+In **medical problems**, we must focus on **reducing False Negatives (FN)**.
+
+Because:
+
+* **False Negative:** Patient has disease but model says healthy → **very dangerous**
+* Disease may **go untreated**
+
+So we prioritize **High Recall (Sensitivity)**.
+
+### Simple Interview Line
+
+You can say:
+
+> In medical diagnosis, **recall is very important because we want to minimize false negatives**, ensuring that diseased patients are not missed.
+
+# 4️⃣ Quick Memory Trick
+
+| Metric        | Focus                      |
+| ------------- | -------------------------- |
+| **Precision** | Reduce **False Positives** |
+| **Recall**    | Reduce **False Negatives** |
+| **F1 Score**  | Balance both               |
+
+
+# 5️⃣ If interviewer asks your project
+
+You can say:
+
+> In my project, I evaluated the model using **accuracy, precision, recall, and F1 score**, but in medical diagnosis **recall is especially important because missing a disease case (false negative) can be critical**.
+
+2) Why is accuracy not enough for medical diagnosis?
+
+Accuracy alone is not always reliable in medical problems because the dataset may be imbalanced. For example, if most images are normal, a model could predict “normal” most of the time and still get high accuracy.
+Therefore, we also use precision, recall, and F1-score to better evaluate the model’s performance.
+
+
+# 1️⃣ Why did you resize images to **224 × 224**?
+
+**Answer**
+
+Most CNN models like **MobileNetV2 and EfficientNetB0** expect a fixed input size. Resizing images to **224 × 224** ensures that all images have the same dimensions and match the input requirements of the pre-trained models.
+
+---
+
+# 2️⃣ Why did you split the dataset **80% training, 10% validation, 10% testing**?
+
+**Answer**
+
+The **training set (80%)** is used to train the model.
+The **validation set (10%)** helps tune hyperparameters and monitor overfitting during training.
+The **test set (10%)** is used for final evaluation to measure the model’s performance on unseen data.
+
+---
+
+# 3️⃣ Why did you use **Softmax activation**?
+
+**Answer**
+
+Softmax is used for **multi-class classification problems**. It converts the model’s outputs into **probability values**, where the sum of probabilities across classes equals 1. This allows the model to predict which class has the highest probability.
+
+---
+
+# 4️⃣ Why did you use **Sparse Categorical Crossentropy loss**?
+
+**Answer**
+
+Sparse categorical crossentropy is used when the **target labels are integers instead of one-hot encoded vectors**. It is suitable for **multi-class classification tasks** like predicting different eye diseases.
+
+---
+
+# 5️⃣ Why did you use the **Adam optimizer**?
+
+**Answer**
+
+Adam is widely used because it **combines the advantages of RMSProp and momentum**, which helps the model converge faster and improves training stability.
+
+---
+
+# 6️⃣ Why did you use **Early Stopping (monitor = validation loss, patience = 3)**?
+
+**Answer**
+
+Early stopping helps **prevent overfitting**. By monitoring the **validation loss**, the training stops automatically if the model does not improve after **3 epochs**, ensuring better generalization.
+
+---
+
+# 7️⃣ Why did you use **Max Pooling**?
+
+**Answer**
+
+Max pooling reduces the **spatial dimensions of feature maps**, which helps reduce computation and keeps the most important features from the image.
+
+---
+
+# 8️⃣ Why did you use **rembg for background removal**?
+
+**Answer**
+
+Fundus images contain **large background areas that do not contain useful medical information**. Removing the background helps the model focus on **important retinal features**, which improves classification performance.
+
+---
+
+# 9️⃣ Why did you try multiple models (**MobileNetV2, InceptionV3, EfficientNetB0, EfficientNetB1**)?
+
+**Answer**
+
+Different CNN architectures extract features differently. Testing multiple models allows us to **compare their performance and select the best model for the dataset**.
+
+---
+
+# 🔟 Why did MobileNetV2 perform best?
+
+**Answer**
+
+MobileNetV2 is a **lightweight architecture with fewer parameters**, which helps reduce overfitting and computational cost while still extracting meaningful features.
+
+---
+
+# 1️⃣1️⃣ Why did you use **TensorFlow**?
+
+**Answer**
+
+TensorFlow provides **efficient deep learning tools, built-in pre-trained models, and strong support for GPU acceleration**, making it suitable for training CNN models.
+
+---
+
+# ⭐ Interview Tip
+
+If the interviewer asks **many technical questions**, remember this **3-step explanation**:
+
+**Data preprocessing → Model training → Evaluation**
+
+Example:
+
+> First I performed preprocessing like **background removal and resizing**, then trained multiple **pre-trained CNN models**, and finally evaluated them using **accuracy, precision, recall, and F1 score**.
+
+---
+
+If you want, I can also prepare the **10 most difficult technical questions interviewers ask in CNN projects** (these are the ones that usually **surprise candidates**).
+
+
+Here are **10 difficult / tricky questions** interviewers often ask for **CNN medical image projects**. I’ll also give **short answers you can remember easily**.
+
+---
+
+# 1️⃣ Why did you use **transfer learning** instead of training from scratch?
+
+**Answer**
+
+Training a deep CNN from scratch requires **a very large dataset and high computational cost**. Transfer learning allows us to use **pre-trained models that already learned general visual features**, which improves performance and reduces training time.
+
+---
+
+# 2️⃣ What is the difference between **fine-tuning and transfer learning**?
+
+**Answer**
+
+In **transfer learning**, we use a pre-trained model and only train the final layers.
+In **fine-tuning**, we unfreeze some deeper layers and train them to adapt the model better to the new dataset.
+
+---
+
+# 3️⃣ How do you know your model is **not overfitting**?
+
+**Answer**
+
+I monitored **training and validation loss** during training and used **early stopping**. If validation loss stops improving, training is stopped to prevent overfitting.
+
+---
+
+# 4️⃣ Why did you remove the **background** in fundus images?
+
+**Answer**
+
+The background in fundus images does not contain useful medical features. Removing it helps the model focus on **important retinal structures**, improving classification performance.
+
+---
+
+# 5️⃣ What is the difference between **precision and recall**?
+
+**Answer**
+
+* **Precision** measures how many predicted disease cases are actually correct.
+* **Recall** measures how many actual disease cases the model correctly detects.
+
+In medical diagnosis, **recall is more important** because we want to **avoid missing diseased patients (false negatives)**.
+
+---
+
+# 6️⃣ Why did you choose **Sparse Categorical Crossentropy** instead of Categorical Crossentropy?
+
+**Answer**
+
+Sparse categorical crossentropy is used when **labels are integer encoded** rather than one-hot encoded, which makes training more efficient.
+
+---
+
+# 7️⃣ What is **max pooling** and why is it used?
+
+**Answer**
+
+Max pooling reduces the **size of feature maps**, which lowers computation and helps retain the most important features from the image.
+
+---
+
+# 8️⃣ How would you **improve your model further**?
+
+**Answer**
+
+The model could be improved using **data augmentation, hyperparameter tuning, and ensemble models** to improve robustness and generalization.
+
+---
+
+# 9️⃣ What happens if the dataset is **imbalanced**?
+
+**Answer**
+
+If the dataset is imbalanced, the model may bias toward the majority class. To handle this, we can use **class weighting, data augmentation, or resampling techniques**.
+
+---
+
+# 🔟 Why is **accuracy alone not enough** for medical AI?
+
+**Answer**
+
+Accuracy may be misleading if the dataset is imbalanced. Therefore, we also evaluate the model using **precision, recall, and F1-score**.
+
+---
+
+# ⭐ One question interviewers LOVE asking
+
+**“What happens if your model predicts a disease incorrectly?”**
+
+Good answer:
+
+> That is why evaluation metrics like **recall and precision** are important, and the model should be used as a **decision-support system for doctors rather than replacing medical professionals**.
+
+---
+
+If you want, I can also give you **5 very deep CNN questions (about MobileNetV2 architecture, depthwise convolution, etc.)** that **AI interviewers often ask to test real understanding**.
+
+Here are **clear and simple explanations** you can use in an interview.
+
+---
+
+# 1️⃣ What are **Epochs**?
+
+**Answer**
+
+An **epoch** means one complete pass of the entire training dataset through the model during training.
+
+For example, if the dataset has **1000 images**, one epoch means the model has seen **all 1000 images once**.
+
+We usually train the model for **multiple epochs** so that it can gradually learn better patterns from the data.
+
+---
+
+### Example
+
+If you train for **10 epochs**, the model will go through the **entire dataset 10 times**.
+
+---
+
+# 2️⃣ What are **Resampling Techniques**?
+
+Resampling techniques are used when the **dataset is imbalanced** (for example, more normal images than disease images).
+
+They help balance the dataset so the model does not become biased.
+
+---
+
+### Common Resampling Techniques
+
+**1️⃣ Oversampling**
+
+Increase the number of samples in the **minority class**.
+
+Example: Duplicate or generate more disease images.
+
+---
+
+**2️⃣ Undersampling**
+
+Reduce the number of samples in the **majority class**.
+
+Example: Remove some normal images.
+
+---
+
+**3️⃣ SMOTE (Synthetic Minority Oversampling Technique)**
+
+Generate **synthetic samples** of the minority class instead of simply duplicating them.
+
+---
+
+### Simple interview line
+
+> Resampling techniques such as **oversampling and undersampling** are used to balance imbalanced datasets so the model does not bias toward the majority class.
+
+---
+
+💡 Interviewers sometimes ask this **follow-up question**:
+
+**“Did you apply data augmentation in your project?”**
+
+If you want, I can also show you **how to answer that even if you didn’t use it**, which helps avoid losing marks in interviews.
+
+
