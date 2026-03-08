@@ -1,0 +1,51 @@
+Shorts Creator – Network18 Internship
+
+Problem:
+During this internship, I developed a tool called Shorts Creator because creating short video content from long videos manually can be time-consuming for content creators.
+
+Approach:
+The system automatically converts long YouTube videos into short clips. It first extracts audio from the video and performs speech-to-text transcription, then analyzes the text to identify important segments of the video and generates short clips from those parts.
+
+Tools:
+I implemented this system using Python, with FastAPI for the backend, HTML for the user interface, and the Gemini API for processing and analyzing the video content.
+
+Impact:
+This tool helps automate the creation of short-form content from long videos, making the process faster and more efficient for content creators.
+
+This is the final now i want a folloow up question 
+
+How could you improve this system in the future?
+
+Answer
+
+The system could be improved by adding better segmentation, improved summarization techniques, and optimizing video processing for faster performance.
+
+How do you ensure the generated shorts are correct?
+
+Answer
+
+Before finalizing the shorts, I implemented a validation step. The system presents the generated clips to the user so they can review them before final output. The user can accept, delete, or modify the segments, ensuring that the final shorts accurately represent the intended content.
+
+What was the biggest challenge in this project?
+
+Answer
+
+One of the biggest challenges was the processing time required to generate the final short clips. When multiple clips need to be created from the video, generating them one by one can take more time. Since these clipping tasks are independent of each other, I applied parallel processing for the final shorts generation. This allowed multiple clips to be created simultaneously, which significantly reduced the total processing time.
+
+
+Flask → A lightweight Python framework used to build web applications and APIs.
+
+FastAPI → A modern Python framework used to build high-performance APIs, especially useful for applications that need fast processing.
+
+
+yt-dlp → download video
+
+AssemblyAI → transcript
+
+Gemini API → analyze content
+
+FFmpeg → create clips
+
+FastAPI → backend
+
+Jinja2 / HTML → interface
