@@ -1,2 +1,8 @@
 Window function: https://www.youtube.com/watch?v=rIcB4zMYMas
 Date and Time : https://www.youtube.com/watch?v=R1nxwK7XLhI
+
+1) A Super Key uniquely identifies a row but may contain extra attributes. A Candidate Key is a minimal super key, and 
+a Primary Key is the candidate key selected to uniquely identify records in the table.
+
+2) The referenced key is the primary key in the parent table, and the referencing key is the foreign key in 
+the child table that refers to that primary key.
