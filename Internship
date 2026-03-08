@@ -1,18 +1,22 @@
-Shorts Creator – Network18 Internship
+1) Shorts Creator – Network18 Internship
 
 Problem:
-During this internship, I developed a tool called Shorts Creator because creating short video content from long videos manually can be time-consuming for content creators.
+During this internship, I developed a tool called Shorts Creator because creating short video content from long videos manually 
+can be time-consuming for content creators.
 
 Approach:
-The system automatically converts long YouTube videos into short clips. It first extracts audio from the video and performs speech-to-text transcription, then analyzes the text to identify important segments of the video and generates short clips from those parts.
+The system automatically converts long YouTube videos into short clips. It first extracts audio from the video and 
+performs speech-to-text transcription, then analyzes the text to identify important segments of the video and 
+generates short clips from those parts.
 
 Tools:
-I implemented this system using Python, with FastAPI for the backend, HTML for the user interface, and the Gemini API for processing and analyzing the video content.
+I implemented this system using Python, with FastAPI for the backend, HTML for the user interface, and 
+the Gemini API for processing and analyzing the video content.
 
 Impact:
-This tool helps automate the creation of short-form content from long videos, making the process faster and more efficient for content creators.
+This tool helps automate the creation of short-form content from long videos, making the process faster and
+more efficient for content creators.
 
-This is the final now i want a folloow up question 
 
 How could you improve this system in the future?
 
