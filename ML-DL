@@ -156,24 +156,7 @@ TensorFlow provides **efficient deep learning tools, built-in pre-trained models
 
 ---
 
-# ⭐ Interview Tip
 
-If the interviewer asks **many technical questions**, remember this **3-step explanation**:
-
-**Data preprocessing → Model training → Evaluation**
-
-Example:
-
-> First I performed preprocessing like **background removal and resizing**, then trained multiple **pre-trained CNN models**, and finally evaluated them using **accuracy, precision, recall, and F1 score**.
-
----
-
-If you want, I can also prepare the **10 most difficult technical questions interviewers ask in CNN projects** (these are the ones that usually **surprise candidates**).
-
-
-Here are **10 difficult / tricky questions** interviewers often ask for **CNN medical image projects**. I’ll also give **short answers you can remember easily**.
-
----
 
 # 1️⃣ Why did you use **transfer learning** instead of training from scratch?
 
@@ -196,7 +179,8 @@ In **fine-tuning**, we unfreeze some deeper layers and train them to adapt the m
 
 **Answer**
 
-I monitored **training and validation loss** during training and used **early stopping**. If validation loss stops improving, training is stopped to prevent overfitting.
+I monitored **training and validation loss** during training and used **early stopping**. 
+If validation loss stops improving, training is stopped to prevent overfitting.
 
 ---
 
@@ -204,7 +188,8 @@ I monitored **training and validation loss** during training and used **early st
 
 **Answer**
 
-The background in fundus images does not contain useful medical features. Removing it helps the model focus on **important retinal structures**, improving classification performance.
+The background in fundus images does not contain useful medical features. 
+Removing it helps the model focus on **important retinal structures**, improving classification performance.
 
 ---
 
@@ -223,7 +208,8 @@ In medical diagnosis, **recall is more important** because we want to **avoid mi
 
 **Answer**
 
-Sparse categorical crossentropy is used when **labels are integer encoded** rather than one-hot encoded, which makes training more efficient.
+Sparse categorical crossentropy is used when **labels are integer encoded** rather than one-hot encoded, 
+which makes training more efficient.
 
 ---
 
@@ -239,7 +225,8 @@ Max pooling reduces the **size of feature maps**, which lowers computation and h
 
 **Answer**
 
-The model could be improved using **data augmentation, hyperparameter tuning, and ensemble models** to improve robustness and generalization.
+The model could be improved using **data augmentation, hyperparameter tuning, and ensemble models** 
+to improve robustness and generalization.
 
 ---
 
@@ -247,7 +234,8 @@ The model could be improved using **data augmentation, hyperparameter tuning, an
 
 **Answer**
 
-If the dataset is imbalanced, the model may bias toward the majority class. To handle this, we can use **class weighting, data augmentation, or resampling techniques**.
+If the dataset is imbalanced, the model may bias toward the majority class.
+To handle this, we can use **class weighting, data augmentation, or resampling techniques**.
 
 ---
 
@@ -265,15 +253,10 @@ Accuracy may be misleading if the dataset is imbalanced. Therefore, we also eval
 
 Good answer:
 
-> That is why evaluation metrics like **recall and precision** are important, and the model should be used as a **decision-support system for doctors rather than replacing medical professionals**.
+> That is why evaluation metrics like **recall and precision** are important, and 
+the model should be used as a **decision-support system for doctors rather than replacing medical professionals**.
 
----
 
-If you want, I can also give you **5 very deep CNN questions (about MobileNetV2 architecture, depthwise convolution, etc.)** that **AI interviewers often ask to test real understanding**.
-
-Here are **clear and simple explanations** you can use in an interview.
-
----
 
 # 1️⃣ What are **Epochs**?
 
@@ -327,7 +310,8 @@ Generate **synthetic samples** of the minority class instead of simply duplicati
 
 ### Simple interview line
 
-> Resampling techniques such as **oversampling and undersampling** are used to balance imbalanced datasets so the model does not bias toward the majority class.
+> Resampling techniques such as **oversampling and undersampling** are used to balance imbalanced datasets so the 
+model does not bias toward the majority class.
 
 ---
 
@@ -336,5 +320,105 @@ Generate **synthetic samples** of the minority class instead of simply duplicati
 **“Did you apply data augmentation in your project?”**
 
 If you want, I can also show you **how to answer that even if you didn’t use it**, which helps avoid losing marks in interviews.
+
+
+Here is a **simple explanation** you can use in an interview.
+
+---
+
+## 1️⃣ Why do we use a Loss Function?
+
+The **loss function** measures **how wrong the model’s predictions are compared to the actual values**.
+
+Purpose:
+
+* It tells the model **how much error it is making**.
+* The training process tries to **minimize this loss**.
+
+Example:
+In your project you used **Sparse Categorical Crossentropy** because it is suitable for **multi-class classification problems**.
+
+---
+
+## 2️⃣ Why do we use an Optimizer?
+
+The **optimizer updates the model’s weights** to reduce the loss during training.
+
+Purpose:
+
+* Helps the model **learn better patterns from the data**
+* Adjusts parameters to **minimize the loss function**
+
+Example:
+You used **Adam optimizer**, which is popular because it **converges faster and works well for deep learning models**.
+
+---
+
+## 3️⃣ Why do we use an Activation Function?
+
+Activation functions help the neural network **learn complex patterns by introducing non-linearity**.
+
+Without activation functions, the model would behave like a **simple linear model**.
+
+Example:
+You used **Softmax activation** because it converts outputs into **probabilities for multi-class classification**.
+
+---
+
+## Easy Way to Remember
+
+| Component           | Purpose                              |
+| ------------------- | ------------------------------------ |
+| Loss Function       | Measures prediction error            |
+| Optimizer           | Updates model weights to reduce loss |
+| Activation Function | Helps model learn complex patterns   |
+
+---
+
+### Simple Interview Line
+
+> The loss function measures the prediction error, the optimizer updates the model weights to minimize that error, and the activation function helps the neural network learn complex patterns in the data.
+
+
+Here is a **simple and clear comparison** you can say in an interview.
+
+---
+
+## Difference between TensorFlow and PyTorch
+
+| Feature               | TensorFlow                      | PyTorch                      |
+| --------------------- | ------------------------------- | ---------------------------- |
+| Developer             | Google                          | Meta (Facebook)              |
+| Computation Graph     | Static graph (earlier versions) | Dynamic graph                |
+| Ease of Use           | Slightly more complex           | Easier and more intuitive    |
+| Debugging             | Harder to debug                 | Easier to debug              |
+| Research Use          | Less common in research         | Very popular in research     |
+| Production Deployment | Strong production tools         | Improving production support |
+
+---
+
+## Simple Explanation
+
+**TensorFlow**
+
+* Developed by **Google**
+* Widely used for **production systems and large-scale deployment**
+* Provides tools like **TensorFlow Serving and TensorFlow Lite**
+
+**PyTorch**
+
+* Developed by **Meta (Facebook)**
+* Easier to use and **very popular in research and experimentation**
+* Uses **dynamic computation graphs**, which makes debugging easier.
+
+---
+
+## Short Interview Answer
+
+> TensorFlow and PyTorch are both deep learning frameworks. TensorFlow is widely used for production and large-scale deployment, while PyTorch is preferred for research because it is more flexible and easier to debug due to its dynamic computation graph.
+
+---
+
+If you want, I can also explain **static vs dynamic computation graph** (this is a **very common follow-up question** in ML interviews).
 
 
