@@ -49,3 +49,14 @@ FFmpeg → create clips
 FastAPI → backend
 
 Jinja2 / HTML → interface
+
+
+Why is this Shorts Creator project useful for a company when many AI tools already exist?
+
+Answer
+
+Although many AI tools exist, companies often need customized solutions that fit their specific workflow and content requirements. This project was useful because it provided a tailored system for automatically generating short clips from long videos, which can save time for content teams.
+
+In media companies like Network18, a large amount of video content is produced daily. A tool like this helps quickly identify important segments and convert them into short-form content, which is very useful for platforms like YouTube Shorts or social media.
+
+Additionally, building an internal solution allows the company to customize the processing pipeline, control the data, and integrate it with their existing systems, which may not always be possible with external tools.
