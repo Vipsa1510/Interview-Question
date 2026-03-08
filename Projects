@@ -1,1 +1,38 @@
+1) Multiple Eye Disease Detection (Project Explanation)
+
+Problem:
+The goal of this project was to help with early detection of eye diseases using AI, because manual diagnosis by ophthalmologists can be time-consuming and sometimes prone to human limitations.
+
+Approach:
+I used pre-trained CNN models with transfer learning to classify fundus images into four classes: Normal, Cataract, Glaucoma, and Diabetic Retinopathy. During preprocessing, I performed background removal and image resizing so that the model focuses on important eye features and the images match the input size required by the models. I experimented with models such as InceptionV3, MobileNetV2, and EfficientNet.
+
+Result:
+Among the tested models, MobileNetV2 performed the best and achieved around 98.5% accuracy.
+
+Impact:
+This project shows how deep learning can support early diagnosis of eye diseases, and the research was later published in IEEE Xplore
+
+
+2) Why did MobileNetV2 perform better than other models?
+
+MobileNetV2 performed better because it is lightweight and efficient, with fewer parameters compared to other deep models. It can capture important features while keeping computational cost low, which helped achieve better accuracy for this dataset.
+
+What evaluation metrics did you use?
+
+I evaluated the model using accuracy, precision, recall, and F1-score to measure classification performance and ensure the model performs well across all classes.
+
+
+3) Why did you use a pre-trained model?
+
+Better Answer
+
+I used a pre-trained model with transfer learning because training a deep CNN from scratch requires a very large dataset and high computational resources. Pre-trained models are already trained on large datasets like ImageNet and have learned general visual features such as edges, shapes, and textures. By fine-tuning the model on my dataset, I could achieve better performance with less training time and fewer data samples.
+
+
+4) What challenges did you face?
+
+Better Answer
+
+One challenge was that fundus images contain a large background area that is not useful for disease detection. If this background is not handled properly, the model may treat it as a feature and reduce classification accuracy. To address this, I applied background removal and preprocessing techniques, which helped the model focus only on the important retinal features
+
 
