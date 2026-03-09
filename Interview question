@@ -7,6 +7,12 @@ a = [1,2,3]
 b = a 
 b.append(4)
 print(a)
+output = [1,2,3,4]
+a = [1,2,3]
+b = a.copy()
+b.append(4)
+print(a)
+output = [1,2,3]
 4) You have done Web Scrapping at Maruti infosoft which liberary have you used and which data visualiztion tool used?
 5) any Challenges happend during the web scrapping and data visualization?
 6) you have a recommmendation tool how to perform it?
