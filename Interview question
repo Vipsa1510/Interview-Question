@@ -1,0 +1,16 @@
+Stryker question
+1) tell me about any project have you done
+for Shorts cretor which liberary used for audio to Transcript ? use asembliai
+2) Using ML related
+3) What is the output of this code: 
+a = [1,2,3]
+b = a 
+b.append(4)
+print(a)
+4) You have done Web Scrapping at Maruti infosoft which liberary have you used and which data visualiztion tool used?
+5) any Challenges happend during the web scrapping and data visualization?
+6) you have a recommmendation tool how to perform it?
+7) What is the basic model lifecycle?
+8) coding problem: You want to bye 1st and then sell it find the maximum profit?
+Similar to this : https://www.geeksforgeeks.org/dsa/best-time-to-buy-and-sell-stock/#expected-approach-one-traversal-solution-on-time-and-o1-space
+
