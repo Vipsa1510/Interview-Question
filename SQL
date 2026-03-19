@@ -1,3 +1,5 @@
+Please revise all the concepts related to the Normal form, Transaction properties and whole
+
 Window function: https://www.youtube.com/watch?v=rIcB4zMYMas
 Date and Time : https://www.youtube.com/watch?v=R1nxwK7XLhI
 
